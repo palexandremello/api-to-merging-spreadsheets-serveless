@@ -1,0 +1,17 @@
+  repos:        
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: 3.9.2
+    hooks:
+    - id: flake8
+      stages: [commit]
+
+  - repo: local
+    hooks:
+    - id: requirements
+      name: requirements
+      #entry: bash -c '$(pwd)/marketplace/venv/bin/pip3 freeze > $(pwd)/marketplace/requirements.txt; git add $(pwd)/marketplace/requirements.txt'
+      entry: bash -c 'pip freeze | grep -v "pkg-resources" > requirements.txt'
+
+      language: system
+      pass_filenames: false
+      stages: [commit]
