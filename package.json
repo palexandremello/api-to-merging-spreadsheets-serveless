@@ -1,0 +1,13 @@
+{
+  "name": "api-to-merging-spreadsheets-serveless",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:palexandremello/api-to-merging-spreadsheets-serveless.git",
+  "author": "Paulo Alexandre Mello <palexandremello@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "serverless-offline": "^8.0.0",
+    "serverless-python-requirements": "^5.1.1",
+    "serverless-wsgi": "^2.0.1"
+  }
+}
